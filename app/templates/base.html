@@ -8,7 +8,14 @@
       {% endif %}
     </head>
     <body>
-        <div>Breast and Ovarian Cancer Screening Tool <a href="/index">Home</a></div>
+        <div>Breast and Ovarian Cancer Screening Tool
+        <!-- <a href="/index">Home</a>
+        <a href="/login">Login</a> -->
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('screening') }}">Screening Tool</a>
+
+        </div>
         <hr>
         {% block content %}{% endblock %}
     </body>

@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block title %}Referral Screening Tool{% endblock %}
+
+{% block content %}
+
+<form class="bg-white p-5 rounded mt-3" action="" method="POST">
+    <h1 class="text-center">Referral Screening Tool</h1>
+
+    {{ form.csrf_token }}
+<p>
+    {{ form.patient_name.label }}<br>
+    {{ form.patient_name(class='form-control') }}
+</p>
+
+<p>
+    {{ form.question1.label }}
+    {{ form.question1(class='form-control') }}
+</p>
+
+
+<p>
+    {{ form.question2.label }}
+    {{ form.question2(class='form-control') }}
+</p> 
+
+
+<p>
+    {{ form.question3.label }}
+    {{ form.question3(class='form-control') }}
+</p>
+
+<p>
+    {{ form.question4.label }}
+    {{ form.question4(class='form-control') }}
+</p>
+
+<p>
+    {{ form.question5.label }}
+    {{ form.question5(class='form-control') }}
+</p>
+
+<p>
+    {{ form.question6.label }}
+    {{ form.question6(class='form-control') }}
+</p>
+
+
+<p>
+    {{ form.question7.label }}
+    {{ form.question7(class='form-control') }}
+</p> 
+
+<p> 
+    {{ form.question8.label }}
+    {{ form.question8(class='form-control') }}
+
+</p>
+<p>
+    {{ form.question9.label }}
+    {{ form.question9(class='form-control') }}
+
+</p>
+
+<p>
+    {{ form.question10.label }}
+    {{ form.question10(class='form-control') }}
+</p>
+    
+<p>
+    {{ form.question11.label }}
+    {{ form.question11(class='form-control') }}
+   </p> 
+
+<p>
+        {{ form.question12.label }}
+        {{ form.question12(class='form-control') }}
+    </p>
+
+<p>
+    {{ form.question13.label }}
+    {{ form.question13(class='form-control') }}
+</p>
+
+<p>
+    {{ form.question14.label }}
+    {{ form.question14(class='form-control') }}
+
+</p>
+
+<p>
+    {{ form.question15.label }}
+    {{ form.question15(class='form-control') }}
+</p>
+
+
+<p>
+    {{ form.question16.label }}
+    {{ form.question16(class='form-control') }}
+
+</p>   
+
+ <p>
+    {{ form.question17.label }}
+    {{ form.question17(class='form-control') }}
+
+</p> 
+
+<p>
+    {{ form.question18.label }}
+    {{ form.question18(class='form-control') }}
+
+</p>  
+
+<p>
+    {{ form.question19.label }}
+    {{ form.question19(class='form-control') }}
+
+</p>   
+
+
+<p>
+    {{ form.question20.label }}
+    {{ form.question20(class='form-control') }}
+</p>   
+
+<p>
+    {{ form.question21.label }}
+    {{ form.question21(class='form-control') }}
+
+</p>    
+
+<p>
+    {{ form.question22.label }}
+    {{ form.question22(class='form-control') }}
+</p>  
+
+<p>
+    {{ form.question23.label }}
+    {{ form.question23(class='form-control') }}
+</p>   
+
+    
+<p>
+    {{ form.question24.label }}
+    {{ form.question24(class='form-control') }}
+
+</p>
+
+
+    {{ form.submit(class='btn btn-primary w-100 mt-3') }}
+
+</form>
+{% endblock %}
+
+
