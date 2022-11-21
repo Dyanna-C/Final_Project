@@ -1,34 +1,23 @@
-import os
 from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 from config import Config
-#from app import routes
 
-
+# Create an instance of the Flask class - central object of the whole app
 app = Flask(__name__)
+
+# Add a SECRET_KEY to the app config
+app.config['SECRET_KEY'] = 'you-will-never-guess'
+
+# Configure the app using the Config class and the .from_object() method
 app.config.from_object(Config)
 
+# Create an instance of SQLAlchemy to represent our database
+db = SQLAlchemy(app)
 
-def create_app(test_config=None):
-    # create and configure the app
-    app = Flask(__name__, instance_relative_config=True)
-    app.config.from_mapping(
-        SECRET_KEY='dev',
-        DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
-    )
+# Create an instance of Migrate to represent our migration engine
+migrate = Migrate(app, db)
 
-    if test_config is None:
-        # load the instance config, if it exists, when not testing
-        app.config.from_pyfile('config.py', silent=True)
-    else:
-        # load the test config if passed in
-        app.config.from_mapping(test_config)
+# import all of the routes from the routes module in the current folder
+from . import routes, models
 
-    # ensure the instance folder exists
-    try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
-
-    return app
-
-from app import routes

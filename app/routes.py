@@ -1,10 +1,3 @@
-# from app import app
-# from flask import render_template, flash, redirect, url_for
-# from app.forms import SignUpForm, LogInForm
-# # from app.models import User, Post
-
-
-
 from flask import render_template, redirect, url_for
 from app import app
 from app.forms import SignUpForm, LogInForm, ReferralScreeningForm
