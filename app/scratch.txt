@@ -107,3 +107,32 @@ base.html
 forms.py
 class ReferralScreeningForm(FlaskForm):
  patient_name = StringField('Patient Full Name', validators=[DataRequired()])
+
+ # class ReferralScreeningForm(FlaskForm):
+#    firstname 
+#    lastname 
+#     question1 
+#     question2
+#     question3 
+#     question4
+#     question5 
+#     question6
+#     question7 
+#     question8 = BooleanField('Does the patients daughter have a history of ovarian cancer at any age')
+#     question9 = BooleanField('Does the patients maternal grandmother have a history of breast cancer at age ≤50')
+#     question10 = BooleanField('Does the patients maternal grandmother have a history of ovarian cancer at any age')
+#     question11 = BooleanField('Does the patients maternal aunt have a history of breast cancer at age ≤50')
+#     question12 = BooleanField('Does the patients maternal aunt have a history of ovarian cancer at any age')
+#     question13 = BooleanField('Does the patients paternal grandmother have a history of breast cancer at age ≤50')
+#     question14 = BooleanField('Does the patients paternal grandmother have a history of ovarian cancer at any age')
+#     question15= BooleanField('Does the patients paternal aunt have a history of breast cancer at age ≤50')
+#     question16= BooleanField('Does the patients paternal aunt have a history of ovarian cancer at any age')
+#     question17 = BooleanField('Does the Patient ≥ 2 cases of breast cancer after age 50 on same side of family')
+#     question18 = BooleanField('Does the Patient have a family history of male breast cancer')
+#     question19 = BooleanField('Is the patient of Jewish Ancestry')
+#     question20 = BooleanField('Does the patients mother have a history of ovarian cancer at any age')
+#     question21 = BooleanField('Does the Patient have a history of breast cancer at age 50')
+#     question22 = BooleanField('Does the Patient have a history of ovarian cancer at any age')
+#     question23 = BooleanField('Does the patients mother have a history of breast cancer at age ≤50')
+#     question24 = BooleanField('Does the patients mother have a history of ovarian cancer at any age')
+#     submit = SubmitField()

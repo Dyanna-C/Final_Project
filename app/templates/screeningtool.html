@@ -9,8 +9,13 @@
 
     {{ form.csrf_token }}
 <p>
-    {{ form.patient_name.label }}<br>
-    {{ form.patient_name(class='form-control') }}
+    {{ form.firstname.label }}<br>
+    {{ form.firstname(class='form-control') }}
+</p>
+
+<p>
+    {{ form.lastname.label }}<br>
+    {{ form.lastname(class='form-control') }}
 </p>
 
 <p>
