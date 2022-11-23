@@ -10,8 +10,7 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(64), index=True, unique=True)
     password = db.Column(db.String(256), nullable=False)
 
-    # def __repr__(self):
-    #     return '<User {}>'.format(self.username)    
+   
     
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -40,6 +39,54 @@ class Tool(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     firstname = db.Column(db.String(50), nullable=False)
     lastname = db.Column(db.String(50), nullable=False)
+    question1 = db.Column(db.Boolean, nullable=True)
+    question2 = db.Column(db.Boolean, nullable=True)
+    question3 = db.Column(db.Boolean, nullable=True)
+    question4 = db.Column(db.Boolean, nullable=True)
+    question5 = db.Column(db.Boolean, nullable=True)
+    question6 = db.Column(db.Boolean, nullable=True)
+    question7 = db.Column(db.Boolean, nullable=True)
+    question8 = db.Column(db.Boolean, nullable=True)
+    question9 = db.Column(db.Boolean, nullable=True)
+    question10 = db.Column(db.Boolean, nullable=True)
+    question11= db.Column(db.Boolean, nullable=True)
+    question12 = db.Column(db.Boolean, nullable=True)
+    question13 = db.Column(db.Boolean, nullable=True)
+    question14 = db.Column(db.Boolean, nullable=True)
+    question15 = db.Column(db.Boolean, nullable=True)
+    question16 = db.Column(db.Boolean, nullable=True)
+    question17 = db.Column(db.Boolean, nullable=True)
+    question18 = db.Column(db.Boolean, nullable=True)
+    question19 = db.Column(db.Boolean, nullable=True)
+    question20 = db.Column(db.Boolean, nullable=True)
+    question21 = db.Column(db.Boolean, nullable=True)
+    question22 = db.Column(db.Boolean, nullable=True)
+    question23= db.Column(db.Boolean, nullable=True)
+    question24= db.Column(db.Boolean, nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id')) # SQL equivalent to FOREIGN KEY(user_id) REFERENCES user(id)
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        db.session.add(self)
+        db.session.commit()
+
+    # For Post class
+        #def __repr__(self):
+        #return f"<Post {self.id} | {self.title}>"
+
+    #For Tool class return
+    def __repr__(self):
+        return f"<You Have Succesfully Completed Screening Tool {self.firstname}{self.lastname}>"
+
+
+    #For User class
+    # def __repr__(self):
+    #     return '<User {}>'.format(self.username) 
+
+    
+
+
+
 
 
 #     question1 = BooleanField('Does the Patient have a history of breast cancer at age ≤50')
