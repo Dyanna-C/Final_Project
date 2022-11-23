@@ -1,14 +1,13 @@
-<!Doctype html>
-<html>
-    <head>
-        <title>{{ title }} - Microblog</title>
-    </head>
-    <body>
-        <h1>Hello, {{ user.username }}!</h1>
-    </body>
-</html>
+{% extends "base.html" %}
 
-{% extends "base.html" %} 
+{% block title %}Home{% endblock %}
 
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <h1 class="text-center">Hello {{ current_user }}!</h1>
+    {% else %}
+        <h1 class="text-center">Hello, please sign up or login to use The Breast and Ovarian Cancer Screening Tool</h1>
+    {% endif %}
+{% endblock content %}
 
 
