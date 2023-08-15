@@ -5,7 +5,6 @@ from app.models import User, Tool
 from flask_login import login_user, logout_user, current_user, login_required
 
 
-
 @app.route('/')
 def index():
     # user = form.username.data
@@ -36,9 +35,6 @@ def signup():
         #Redirect back to home
         return redirect(url_for('index'))
     return render_template('signup.html', form=form)
-
-
-
 
 
 @app.route('/login', methods=['GET', 'POST'])
